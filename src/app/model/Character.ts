@@ -2,7 +2,8 @@ export class Character {
   name: string;
   imageSrc: string;
   genres: string[] = [];
-  percentageCharacter: Number | undefined;
+  numUserGenreMatches: number | undefined;
+  percentageCharacter: number = 0;
 
   constructor(name: string, genres: string[], imageSrc: string) {
     this.name = name;

@@ -128,7 +128,7 @@ export class AppComponent {
           }
         }
       }
-      character.percentageCharacter = matches / 10;
+      character.numUserGenreMatches = matches / 10;
       if (matches > maxMatches) {
         maxMatches = matches;
         bestMatchedCharacter = character;
@@ -139,7 +139,19 @@ export class AppComponent {
     // @ts-ignore
     this.matchedCharacterName = bestMatchedCharacter.name;
     console.log(this.matchedCharacter);
+    this.getCharacterPercentages();
   }
 
 
+  private getCharacterPercentages() {
+    let totalMatches: Number | undefined = 0;
+    for(let character of this.characters){
+      // @ts-ignore
+      totalMatches = totalMatches +  character.numUserGenreMatches;
+    }
+    for(let character of this.characters){
+      // @ts-ignore
+      character.percentageCharacter = totalMatches /  character.numUserGenreMatches;
+    }
+  }
 }
