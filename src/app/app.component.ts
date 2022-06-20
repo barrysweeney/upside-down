@@ -87,6 +87,7 @@ export class AppComponent {
     let eddie: Character = new Character('Eddie', Genres.Eddie, 'assets/images/eddie.jpg');
     let bob: Character = new Character('Bob', Genres.Bob, 'assets/images/bob.jpg');
 
+    this.characters = [];
     this.characters?.push(
       mike,
       eleven,
@@ -127,10 +128,10 @@ export class AppComponent {
           }
         }
       }
+      character.percentageCharacter = matches;
       if (matches > maxMatches) {
         maxMatches = matches;
         bestMatchedCharacter = character;
-        character.percentageCharacter = matches;
       }
     })
     // @ts-ignore
