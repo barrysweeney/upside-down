@@ -144,14 +144,19 @@ export class AppComponent {
 
 
   private getCharacterPercentages() {
-    let totalMatches: Number | undefined = 0;
+    let totalMatches: number | undefined = 0;
     for(let character of this.characters){
       // @ts-ignore
       totalMatches = totalMatches +  character.numUserGenreMatches;
     }
     for(let character of this.characters){
       // @ts-ignore
-      character.percentageCharacter = totalMatches /  character.numUserGenreMatches;
+      if(character.numUserGenreMatches === 0){
+        character.percentageCharacter = 0;
+      } else {
+        // @ts-ignore
+        character.percentageCharacter = totalMatches / character.numUserGenreMatches;
+      }
     }
   }
 }
