@@ -130,6 +130,7 @@ export class AppComponent {
       if (matches > maxMatches) {
         maxMatches = matches;
         bestMatchedCharacter = character;
+        character.percentageCharacter = matches;
       }
     })
     // @ts-ignore
