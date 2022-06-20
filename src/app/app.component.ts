@@ -155,7 +155,7 @@ export class AppComponent {
         character.percentageCharacter = 0;
       } else {
         // @ts-ignore
-        character.percentageCharacter = totalMatches / character.numUserGenreMatches;
+        character.percentageCharacter = (character.numUserGenreMatches / totalMatches)*100;
       }
     }
   }
