@@ -128,7 +128,7 @@ export class AppComponent {
           }
         }
       }
-      character.percentageCharacter = matches;
+      character.percentageCharacter = matches / 10;
       if (matches > maxMatches) {
         maxMatches = matches;
         bestMatchedCharacter = character;
