@@ -1,11 +1,11 @@
 <div class="container">
-<h1>Which Stranger Things character am I?</h1>
-<div>Hello {{user}}</div>
-<div>Analysing your Spotify usage...</div>
-<div>In Stranger Things, you are...</div>
-<div>{{matchedCharacter?.name}}</div>
-<img src="{{matchedCharacter?.imageSrc}}" class="img-fluid">
-</div>
-<div *ngFor="let character of characters">
-  You are {{character.percentageCharacter}}% {{character.name}}
+  <h1>Which Stranger Things character am I?</h1>
+  <div>Hello {{user}}</div>
+  <div>Analysing your Spotify usage...</div>
+  <div>In Stranger Things, you are...</div>
+  <div>{{matchedCharacter?.name}}</div>
+  <img src="{{matchedCharacter?.imageSrc}}" class="img-fluid">
+  <div *ngFor="let character of characters">
+    You are {{character.percentageCharacter}}% {{character.name}}
+  </div>
 </div>
