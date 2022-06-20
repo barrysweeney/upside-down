@@ -6,6 +6,6 @@
   <div>{{matchedCharacter?.name}}</div>
   <img src="{{matchedCharacter?.imageSrc}}" class="img-fluid">
   <div *ngFor="let character of characters">
-    You are {{character.numUserGenreMatches}}% {{character.name}}
+    You are {{character.percentageCharacter}}% {{character.name}}
   </div>
 </div>
