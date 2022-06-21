@@ -3,14 +3,11 @@
   <h1 class="title">Which Stranger Things character am I?</h1>
   <div class="greet">Hello {{user}}</div>
   <div class="analyze">Analysing your Spotify usage...</div>
-
-  <div>{{matchedCharacter?.name}}</div>
-  <img src="{{matchedCharacter?.imageSrc}}" class="img-fluid">
   <div *ngFor="let character of characters">
     <div class="{{ character.name.split('. ').join('').toLowerCase()}}">
       {{character.name}}
       <img src="{{character.imageSrc}}">
-      {{character.percentageCharacter}}
+      {{character.percentageCharacter}}%
     </div>
   </div>
   </div>
