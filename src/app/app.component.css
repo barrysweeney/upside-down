@@ -9,6 +9,15 @@ img {
   height: 70vh;
 }
 
+@font-face {
+  font-family: strange;
+  src: url("benguiatbold.ttf");
+}
+
+div {
+  font-family: strange, serif;
+}
+
 .greet {
   grid-area: greet;
 }
