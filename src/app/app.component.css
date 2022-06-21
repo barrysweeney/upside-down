@@ -1,0 +1,107 @@
+.title {
+  grid-area: header;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.greet {
+  grid-area: greet;
+}
+
+.analyze {
+  grid-area: analyze;
+}
+
+.mike {
+  grid-area: mike;
+}
+
+.eleven {
+  grid-area: eleven;
+}
+
+.will {
+  grid-area: will;
+}
+
+.dustin {
+  grid-area: dustin;
+}
+
+.lucas {
+  grid-area: lucas;
+}
+
+.max {
+  grid-area: max;
+}
+
+.hopper {
+  grid-area: hopper;
+}
+
+.nancy {
+  grid-area: nancy;
+}
+
+.steve {
+  grid-area: steve;
+}
+
+.eddie {
+  grid-area: eddie;
+}
+
+.murray {
+  grid-area: murray;
+}
+
+.jonathan {
+  grid-area: jonathan;
+}
+
+.joyce {
+  grid-area: joyce;
+}
+
+.billy {
+  grid-area: billy;
+}
+
+.robin {
+  grid-area: robin;
+}
+
+.bob {
+  grid-area: bob;
+}
+
+.mrswheeler {
+  grid-area: mrswheeler;
+}
+
+.argyle {
+  grid-area: argyle;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header"
+    "greet greet greet"
+    "analyze analyze analyze"
+    "will eddie joyce"
+    "steve argyle robin"
+    "hopper murray bob"
+    "mrswheeler dustin nancy"
+    "mike billy jonathan"
+    "lucas max eleven";
+}
+
+
