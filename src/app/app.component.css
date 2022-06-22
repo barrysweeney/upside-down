@@ -26,6 +26,9 @@ div {
   grid-area: analyze;
 }
 
+.c1 {
+  grid-area: c1;
+}
 
 .c2 {
   grid-area: c2;
