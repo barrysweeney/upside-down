@@ -1,5 +1,6 @@
 .title {
   grid-area: header;
+  padding-top: 10px;
 }
 
 img {
