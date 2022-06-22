@@ -169,8 +169,17 @@ export class AppComponent {
     }
     // iterate through characters
     for (let character of this.characters) {
-        // @ts-ignore
-        character.percentageCharacter = ((character.numUserGenreMatches / totalMatches) * 100).toFixed(2);
+      // @ts-ignore
+      character.percentageCharacter = ((character.numUserGenreMatches / totalMatches) * 100).toFixed(2);
     }
+    // sort characters by percentage matched
+    this.sortCharacters();
+  }
+
+  /**
+   * Sorts array of characters by the usersPercentageMatch
+   */
+  private sortCharacters() {
+    this.characters.sort((a, b) => a.percentageCharacter - b.percentageCharacter);
   }
 }
