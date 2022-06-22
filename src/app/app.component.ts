@@ -177,9 +177,9 @@ export class AppComponent {
   }
 
   /**
-   * Sorts array of characters by the usersPercentageMatch
+   * Sorts array of characters by the usersPercentageMatch descending
    */
   private sortCharacters() {
-    this.characters.sort((a, b) => a.percentageCharacter - b.percentageCharacter);
+    this.characters.sort((a, b) => b.percentageCharacter - a.percentageCharacter);
   }
 }
