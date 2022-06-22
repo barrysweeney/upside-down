@@ -26,9 +26,6 @@ div {
   grid-area: analyze;
 }
 
-.c1 {
-  grid-area: c1;
-}
 
 .c2 {
   grid-area: c2;
@@ -94,8 +91,8 @@ div {
   grid-area: c17;
 }
 
-.c18 {
-  grid-area: c18;
+.c0 {
+  grid-area: c0;
 }
 
 .grid-container {
@@ -106,13 +103,13 @@ div {
     "header header header"
     "greet greet greet"
     "analyze analyze analyze"
-    "c1 c1 c1"
-    "c2 c2 c3"
-    "c4 c5 c6"
-    "c7 c8 c9"
-    "c10 c11 c12"
-    "c13 c14 c15"
-    "c16 c17 c18";
+    "c0 c0 c0"
+    "c1 c1 c2"
+    "c3 c4 c5"
+    "c6 c7 c8"
+    "c9 c10 c11"
+    "c12 c13 c14"
+    "c15 c16 c17";
   gap: 10px 10px;
 }
 
