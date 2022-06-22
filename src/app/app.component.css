@@ -26,76 +26,76 @@ div {
   grid-area: analyze;
 }
 
-.mike {
-  grid-area: mike;
+.c1 {
+  grid-area: c1;
 }
 
-.eleven {
-  grid-area: eleven;
+.c2 {
+  grid-area: c2;
 }
 
-.will {
-  grid-area: will;
+.c3 {
+  grid-area: c3;
 }
 
-.dustin {
-  grid-area: dustin;
+.c4 {
+  grid-area: c4;
 }
 
-.lucas {
-  grid-area: lucas;
+.c5 {
+  grid-area: c5;
 }
 
-.max {
-  grid-area: max;
+.c6 {
+  grid-area: c6;
 }
 
-.hopper {
-  grid-area: hopper;
+.c7 {
+  grid-area: c7;
 }
 
-.nancy {
-  grid-area: nancy;
+.c8 {
+  grid-area: c8;
 }
 
-.steve {
-  grid-area: steve;
+.c9 {
+  grid-area: c9;
 }
 
-.eddie {
-  grid-area: eddie;
+.c10 {
+  grid-area: c10;
 }
 
-.murray {
-  grid-area: murray;
+.c11 {
+  grid-area: c11;
 }
 
-.jonathan {
-  grid-area: jonathan;
+.c12 {
+  grid-area: c12;
 }
 
-.joyce {
-  grid-area: joyce;
+.c13 {
+  grid-area: c13;
 }
 
-.billy {
-  grid-area: billy;
+.c14 {
+  grid-area: c14;
 }
 
-.robin {
-  grid-area: robin;
+.c15 {
+  grid-area: c15;
 }
 
-.bob {
-  grid-area: bob;
+.c16 {
+  grid-area: c16;
 }
 
-.mrswheeler {
-  grid-area: mrswheeler;
+.c17 {
+  grid-area: c17;
 }
 
-.argyle {
-  grid-area: argyle;
+.c18 {
+  grid-area: c18;
 }
 
 .grid-container {
@@ -106,13 +106,13 @@ div {
     "header header header"
     "greet greet greet"
     "analyze analyze analyze"
-    "will will will"
-    "eddie eddie joyce"
-    "steve argyle robin"
-    "hopper murray bob"
-    "mrswheeler dustin nancy"
-    "mike billy jonathan"
-    "lucas max eleven";
+    "c1 c1 c1"
+    "c2 c2 c3"
+    "c4 c5 c6"
+    "c7 c8 c9"
+    "c10 c11 c12"
+    "c13 c14 c15"
+    "c16 c17 c18";
   gap: 10px 10px;
 }
 
