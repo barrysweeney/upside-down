@@ -13,7 +13,7 @@ export class AppComponent {
   user = null;
   artists: [{ genres: string[]; }] | undefined;
   genres: string[] | undefined;
-  characters: Character[]  = [];
+  characters: Character[] = [];
   matchedCharacter: Character | undefined;
   matchedCharacterName: string = '';
 
@@ -22,6 +22,9 @@ export class AppComponent {
     this.ngOnInit();
   }
 
+  /**
+   * ngOnInit is a life cycle hook called by Angular to indicate that the Angular is done creating the component
+   */
   ngOnInit() {
     this.setUpCharacters();
     // get access token for API calls from URL
@@ -39,10 +42,15 @@ export class AppComponent {
       this.user = data.display_name;
     })
 
-    this.getTopArtists(accessToken);
+    // Get users top artists
+    this.getUsersTopArtists(accessToken);
   }
 
-  private getTopArtists(accessToken: string | null) {
+  /**
+   * Gets Users top artists
+   * @param accessToken from Spotify API
+   */
+  private getUsersTopArtists(accessToken: string | null) {
     fetch("https://api.spotify.com/v1/me/top/artists", {
       headers: {
         Authorization: "Bearer " + accessToken,
@@ -51,10 +59,14 @@ export class AppComponent {
       return response.json()
     }).then(data => {
       this.artists = data.items;
+      // get users top genres
       this.getUserGenres();
     })
   }
 
+  /**
+   * Iterates through users top artists and pushes the artists associated genres to the user's genres array
+   */
   private getUserGenres() {
     let genres: string[] = [];
     // @ts-ignore
@@ -64,9 +76,14 @@ export class AppComponent {
       })
     });
     this.genres = genres;
-    this.getUsersCharacter();
+    // Checks how many genres the user has in common with each character
+    this.getCharacterMatches();
   }
 
+  /**
+   * Sets up the Stranger Things characters with name, genres, and path to their image
+   * Adds characters to character array
+   */
   private setUpCharacters() {
     let mike: Character = new Character('Mike', Genres.Mike, 'assets/images/mike.jpg');
     let eleven: Character = new Character('Eleven', Genres.Eleven, 'assets/images/eleven.jpg');
@@ -110,13 +127,12 @@ export class AppComponent {
     )
   }
 
-  private getUsersCharacter() {
-    // compare users top spotify genres with stranger things characters genres
-    // the best match is their character
+  /**
+   * Checks number of matches between users top genre and each Stranger Things characters top genres
+   */
+  private getCharacterMatches() {
     let maxMatches: number = 0;
     let bestMatchedCharacter: Character;
-    console.log(this.characters?.length)
-    console.log(this.genres?.length)
     this.characters?.forEach(character => {
       let matches = 0;
       for (let i = 0; i < character.genres.length; i++) {
@@ -128,35 +144,33 @@ export class AppComponent {
           }
         }
       }
+      // 10 artists per playlist
       character.numUserGenreMatches = matches / 10;
       if (matches > maxMatches) {
         maxMatches = matches;
         bestMatchedCharacter = character;
       }
     })
-    // @ts-ignore
-    this.matchedCharacter = bestMatchedCharacter;
-    // @ts-ignore
-    this.matchedCharacterName = bestMatchedCharacter.name;
-    console.log(this.matchedCharacter);
+    // Get users percentage matched with each character
     this.getCharacterPercentages();
   }
 
-
+  /**
+   *  Get users percentage matched with each character
+   */
   private getCharacterPercentages() {
+    // total number of genres matched between user and all characters
     let totalMatches: number | undefined = 0;
-    for(let character of this.characters){
+    // iterate through each character
+    for (let character of this.characters) {
+      // add number of matches per character to total matches
       // @ts-ignore
-      totalMatches = totalMatches +  character.numUserGenreMatches;
+      totalMatches = totalMatches + character.numUserGenreMatches;
     }
-    for(let character of this.characters){
-      // @ts-ignore
-      if(character.numUserGenreMatches === 0){
-        character.percentageCharacter = 0;
-      } else {
+    // iterate through characters
+    for (let character of this.characters) {
         // @ts-ignore
         character.percentageCharacter = ((character.numUserGenreMatches / totalMatches) * 100).toFixed(2);
-      }
     }
   }
 }
