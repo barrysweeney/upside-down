@@ -3,7 +3,7 @@
   <h1 class="title">Which Stranger Things character am I?</h1>
   <div class="greet">Hello {{user}}</div>
   <div class="analyze">Analysing your Spotify usage...</div>
-  <div *ngFor="let character of characters; let i = index">
+  <div *ngFor="let character of characters; let i = index" class="charactercontainer">
     <div class="c{{ i }}">
       {{character.name}} | {{character.percentageCharacter}}%
       <img src="{{character.imageSrc}}">
