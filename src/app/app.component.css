@@ -97,22 +97,12 @@ div {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header"
-    "greet"
-    "analyze"
-    "charactercontainer";
-  gap: 10px 10px;
-}
-
-.charactercontainer {
-  display: grid;
-  grid-area: charactercontainer;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
+    "header header header"
+    "greet greet greet"
+    "analyze analyze analyze"
     "c0 c0 c0"
     "c1 c1 c2"
     "c3 c4 c5"
