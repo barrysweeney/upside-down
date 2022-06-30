@@ -1,5 +1,17 @@
 # UpsideDown
 
+## Try it out
+
+[Link to live website](https://upsidedownbackend.herokuapp.com/login)
+
+## About
+
+This project uses the Spotify Web API to find which Stranger Things character you are most like.
+
+It does this by comparing the genres of your top artists to the genres of the artists used in a Stranger Things character's playlist.
+
+The character playlists are a combination of Spotify and user curated playlists that represent the assumed music tastes of each character.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
 ## Development server
