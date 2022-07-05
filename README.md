@@ -4,6 +4,10 @@
 
 [Link to live website](https://upsidedownbackend.herokuapp.com/login)
 
+![Screenshot from site](src/assets/images/stranger-things-1.jpg)
+
+![Screenshot from site](src/assets/images/stranger-things-2.jpg)
+
 ## About
 
 This project uses the Spotify Web API to find which Stranger Things character you are most like.
