@@ -14,8 +14,6 @@ export class AppComponent {
   artists: [{ genres: string[]; }] | undefined;
   genres: string[] | undefined;
   characters: Character[] = [];
-  matchedCharacter: Character | undefined;
-  matchedCharacterName: string = '';
 
 
   constructor() {
